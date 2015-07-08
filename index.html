@@ -1,23 +1,26 @@
 ---
-layout: default
+layout: home
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div id="home" class="container-fluid">
+  <i id="nav-toggler" class="fa fa-bars"></i>
+  <header>
+    {% include links.html %}
+  </header>
+  <div class="row">
+    <div id="pic-container" class="col-xs-4">
+      <div class="vcenter">
+        <div class="caption wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">Everything is Awesome!</div>
+        <img src="images/home/minion.png" alt="Minion" class="wow bounceInUp" data-wow-duration="1s">
+      </div>
+    </div>
+    <div id="ramp" class="col-xs-2"></div>
+    <div id="intro" class="col-xs-6">
+      <div class="vcenter">
+        <h1 class="wow slideInRight" data-wow-duration="1s" data-wow-delay="2s">Welcome!</h1>
+        <p class="wow slideInRight" data-wow-duration="1s" data-wow-delay="2.2s">Are you ready to experience the awesomeness?</p>
+        <a href="{{ site.baseurl }}/about" class="wow bounceInUp" data-wow-duration="1s" data-wow-delay="4s">Yeah! Sure!!</a>
+      </div>
+    </div>
+  </div>
 </div>
